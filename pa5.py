@@ -37,7 +37,7 @@ def remove_pairs(input_string):
 import math
 
 
-def bisection_root(f, a, b, close_enough=0.0001):
+def bisection_root(f, a, b, close_enough = 0.0000001):
     fa = f(a)
     fb = f(b)
 
@@ -53,7 +53,7 @@ def bisection_root(f, a, b, close_enough=0.0001):
     fc = f(c)
 
     if abs(fc) < close_enough:
-        return round(c, 2)
+        return c
 
     if fa * fc < 0:
         return bisection_root(f, a, c, close_enough)
