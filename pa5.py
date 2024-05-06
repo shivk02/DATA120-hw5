@@ -12,7 +12,10 @@ def gcd(a, b):
 
     return gcd(b, a % b)
 
+
 # Question 2
+
+
 def remove_pairs(input_string):
     if len(input_string) < 2:
         return input_string
@@ -28,3 +31,29 @@ def remove_pairs(input_string):
     else:
         return input_string[0] + remove_pairs(input_string[1:])
 
+
+# Question 3
+
+
+def bisection_root(f, a, b, close_enough=0.001):
+    fa = f(a)
+    fb = f(b)
+
+    if abs(fa) < close_enough:
+        return a
+    if abs(fb) < close_enough:
+        return b
+
+    if fa * fb > 0:
+        raise ValueError()
+
+    c = (a + b) / 2.0
+    fc = f(c)
+
+    if abs(fc) < close_enough:
+        return c
+
+    if fa * fc < 0:
+        return bisection_root(f, a, c, close_enough)
+    else:
+        return bisection_root(f, c, b, close_enough)
