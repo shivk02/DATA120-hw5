@@ -1,7 +1,10 @@
+"""Homework 5 Data 120"""
+
 ## Question 1
 
 
 def gcd(a, b):
+    """This finction determins the gratest common denominator"""
     if b > a:
         c = a
         a = b
@@ -17,6 +20,7 @@ def gcd(a, b):
 
 
 def remove_pairs(input_string):
+    """This function optimises u-turns"""
     if len(input_string) < 2:
         return input_string
 
@@ -34,10 +38,9 @@ def remove_pairs(input_string):
 
 # Question 3
 
-import math
 
-
-def bisection_root(f, a, b, close_enough = 0.0000001):
+def bisection_root(f, a, b, close_enough=0.0000001):
+    """This fucntion finds the root of a function"""
     fa = f(a)
     fb = f(b)
 
