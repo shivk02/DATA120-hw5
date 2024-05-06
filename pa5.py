@@ -35,7 +35,7 @@ def remove_pairs(input_string):
 # Question 3
 
 
-def bisection_root(f, a, b, close_enough=0.001):
+def bisection_root(f, a, b, close_enough=0.0001):
     fa = f(a)
     fb = f(b)
 
